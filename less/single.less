@@ -1,0 +1,306 @@
+/**
+ * Single
+ * -------------------------------------------------- */
+
+//Single Common
+.single {
+
+	.o-entry-main {
+		article {
+			// These styles of section is placed at "content.less"
+		}
+
+		//Post Share
+		.c-post-share {
+			.block {
+				ul.article-social-share {
+					margin: 0;
+					li {
+						margin-right: 7px;
+						padding: 0;
+						a {
+							width: 50px;
+							height: 50px;
+							display: block;
+							position: relative;
+							border-radius: 50%;
+							.transition(all 200ms);
+
+							i {
+								font-size: @font-size-h3;
+
+								&:before {
+									position: absolute;
+									left: 0;
+									right: 0;
+									top: 50%;
+									text-align: center;
+									.translateY(-50%);
+								}
+							}
+
+							&:hover, &:active, &:focus {
+								background-color: @gray-darkest;
+								color: @gray-lightest;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//Default Cactus Author
+		.c-post-author {
+			.heading-group {
+				margin-bottom: 0;
+
+				.item-heading {
+					margin-bottom: 0;
+
+					.heading {
+						margin-bottom: 14px;
+					}
+				}
+			}
+
+			.block-group {
+
+				//Avatar
+				.c-avatar {
+					margin: 0 19px 10px 0;
+
+					.item-avatar {
+						img {
+
+						}
+					}
+				}
+
+				.c-information {
+
+					//Name
+					.c-name {
+						.heading {
+							margin-top: -7px;
+							margin-bottom: 12px;
+							font-size: @font-size-h5;
+						}
+					}
+
+					.c-socials {
+						margin-bottom: 11px;
+						ul {
+							margin: 0 0 10px 0;
+							li {
+								padding: 0 5px 0 0;
+							}
+						}
+					}
+
+					//Summary
+					.c-summary {
+						.item-summary {
+							p {
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//Cactus Post Navigation
+		.c-post-navigation {
+
+			nav.navigation {
+				display: none;
+
+				.item-heading {
+					text-align: left;
+					margin-bottom: 27px;
+					.heading {
+
+					}
+				}
+			}
+
+			.nav-links {
+				p {
+					margin: 0;
+				}
+				.meta-nav {
+					margin-bottom: 6px;
+					font-weight: bold;
+					text-transform: uppercase;
+					color: #999;
+				}
+
+				.nav-previous,
+				.nav-next {
+					a {
+						font-size: @font-size-h5;
+					}
+				}
+			}
+		}
+
+		//Cactus Post Related
+		.c-post-related {
+			.clearfix();
+
+			.heading-group {
+				margin-bottom: 0;
+				.item-heading {
+					margin-bottom: 3px;
+					.heading {
+						margin-bottom: 12px;
+					}
+				}
+			}
+
+			.block-group {
+				.block {
+					@media @max-sm-desktop {
+						margin-bottom: 30px;
+					}
+					.c-thumbnail {
+						img {
+							width: 100%;
+							margin-bottom: 0;
+						}
+					}
+
+					.c-title {
+						margin-bottom: 8px;
+						.item-title {
+							.heading {
+								margin-bottom: 0;
+							}
+						}
+					}
+
+					.c-meta {
+						.item-meta {
+							ul {
+								li {
+									a {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//Default Wordpress Comment Styles
+		#comments.comments-area {
+
+			.comments-title,
+			.comment-reply-title {
+				margin-bottom: 27px;
+			}
+
+			.comments-title {
+				margin-bottom: 34px;
+				span {
+
+				}
+			}
+
+			//Comment Listing
+			ol.comment-list {
+				margin: 0 0 38px 0;
+				li.comment {
+
+					//Comment Body
+					article.comment-body {
+						padding-bottom: 35px;
+
+						.block {
+
+							&.block-left {
+								footer.comment-meta {
+									.comment-avatar {
+										margin-right: 11px;
+										img {
+
+										}
+									}
+
+									.comment-metadata {
+										a {
+											time {
+												font-family: @font-family-meta;
+												color: #777;
+											}
+										}
+									}
+								}
+							}
+
+							&.block-right {
+								max-width: ~"calc(100% - 100px)";
+
+								.comment-author {
+									.heading {
+										margin-top: -5px;
+										margin-bottom: 4px;
+									}
+								}
+
+								.comment-metadata {
+									a {
+										time {
+											font-family: @font-family-meta;
+											color: #777;
+										}
+									}
+								}
+
+								div.comment-content {
+
+									p {
+										color: #666;
+									}
+								}
+							}
+						}
+
+						div.reply {
+							@media @max-sm-desktop {
+								top: -9px;
+							}
+							a.comment-reply-link {
+								padding: 0;
+							}
+						}
+					}
+
+					//Reply Comment
+					ol.children {
+						padding-left: 60px;
+					}
+				}
+			}
+
+			//Comment Submit Respond
+			#respond.comment-respond {
+				.comment-form {
+					label {
+						display: none;
+					}
+					input, textarea {
+						background-color: #f5f5f5;
+						border-radius: 5px;
+					}
+					p {
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+
+}

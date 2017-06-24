@@ -1,0 +1,82 @@
+/**
+ * Header
+ * -------------------------------------------------- */
+
+//Site Header
+.site-header {
+
+	//Common Styles
+	.c-main-navigation {
+		.c-main-navigation__inner {
+			.c-branding__sticky {
+				display: none;
+			}
+			.c-search-btn__sticky {
+				display: none;
+			}
+		}
+	}
+
+	//Style 01
+	&.style-1 {
+
+		@media @max-sm-desktop {
+			background-color: @gray-darkest;
+		}
+
+		//Custom on Header 5
+		.c-top-bar {
+			.c-top-bar__inner {
+
+				//Message
+				.c-message {
+					p {
+						color: @gray-lightest;
+						opacity: 0.5;
+					}
+				}
+
+				//Socials
+				.c-socials {
+					ul {
+						li {
+							a {
+								i {
+									color: @brand-secondary;
+									.transition(color 200ms ease-in-out);
+								}
+								&:hover, &:focus, a:active {
+									i {
+										color: @gray-lightest;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.c-main-navigation {
+			//Please check navigation.less
+		}
+	}
+}
+
+//Custom Style on Header Variations
+
+//Header Style 1
+.header-style-1 {
+	.site-content {
+		.o-page-header {
+			height: 400px;
+			.o-page-header__inner {
+				.block {
+					top: unset;
+					left: 15px;
+					bottom: 12%;
+				}
+			}
+		}
+	}
+}
