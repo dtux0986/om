@@ -1,0 +1,99 @@
+/**
+ * Pages
+ * -------------------------------------------------- */
+
+//Custom Page Header on Sub Page
+.page {
+	.o-page-content {
+		padding: (@padding-large-vertical * 8) 0;
+	}
+}
+
+//Custom Page Header on Sub Page
+.blog,
+.page {
+	.o-page-header {
+		background-color: @gray-lighter;
+		height: 500px;
+		position: relative;
+
+		.o-page-header__inner {
+			height: 100%;
+
+			.block {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.o-page-404 {
+	.error-404 {
+		text-align: center;
+
+		.entry-featured-image {
+			margin-bottom: 53px;
+			.c-thumbnail {
+
+			}
+		}
+
+		.entry-header {
+			.entry-title {
+				margin-bottom: 35px;
+				.heading {
+					font-size: 60px;
+					font-weight: 300;
+				}
+			}
+		}
+		.entry-content {
+			margin-bottom: 40px;
+		}
+		.entry-footer {
+			form {
+				label {
+					width: 40%;
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 20px;
+					input[type="search"] {
+
+					}
+
+					@media @max-xs-desktop {
+						width: 100%;
+					}
+				}
+				input[type="submit"] {
+					.btn();
+					.btn-custom();
+				}
+			}
+		}
+	}
+}
+
+.o-page-search {
+	.search-header {
+		padding-bottom: 10px;
+		margin-bottom: 50px;
+		border-bottom: 1px solid #f5f5f5;
+
+		.heading {
+			font-weight: 700;
+		}
+
+		i {
+			color: @ruby;
+		}
+	}
+}
+
+.o-page-contact {
+
+}
+
+.o-page-maintenance {
+
+}
