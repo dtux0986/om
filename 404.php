@@ -5,58 +5,62 @@
      * @package om
      */
 
-    get_header(); ?>
+?>
 
-	<div class="container">
-		<section class="o-page-content o-page-404">
+<?php $config = \App\Config\ReduxThemeOptions\Initialize::data(); ?>
 
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main main-content">
+<?php get_header(); ?>
 
-					<div id="main-content" class="row">
+<?php get_template_part('partials/page/header/full-width'); ?>
+
+	<section class="o-page-content o-page-404">
+
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main main-content">
+
+				<div class="container o-container">
+					<div class="row o-row">
 
 						<div class="col-xs-12 o-column">
+							<div class="o-entry-main">
+								<section class="error-404 not-found">
+									<header class="entry-header">
+										<div class="entry-featured-image">
 
-							<section class="error-404 not-found">
-								<header class="entry-header">
-									<div class="entry-featured-image">
+										</div>
+										<div class="entry-title">
+											<h1 class="heading">
+
+											</h1>
+										</div>
+									</header>
+									<!-- .entry-header -->
+
+									<div class="entry-content">
 
 									</div>
-									<div class="entry-title">
-										<h1 class="heading">
+									<!-- .entry-content -->
 
-										</h1>
+									<div class="entry-footer">
+
 									</div>
-								</header>
-								<!-- .entry-header -->
-
-								<div class="entry-content">
-
-								</div>
-								<!-- .entry-content -->
-
-								<div class="entry-footer">
-
-								</div>
-								<!-- .entry-footer -->
+									<!-- .entry-footer -->
 
 
-							</section>
-
+								</section>
+							</div>
 						</div>
+						<!--!entry-main-->
 
 					</div>
-					<!-- row -->
+				</div>
 
-				</main>
-				<!-- main -->
-			</div>
-			<!-- primary -->
+			</main>
+			<!-- !main -->
+		</div>
+		<!-- !primary -->
 
-		</section>
-		<!-- #o-page-content -->
-	</div>
+	</section>
+	<!-- !#o-page-content -->
 
-<?php
-
-    get_footer();
+<?php get_footer(); ?>
