@@ -12,32 +12,45 @@
 
     $loader = new Psr4ClassLoader();
 
-    //Register Prefix
     $loader->addPrefix('App', get_template_directory() . '/app');
 
+    /**
+     * Models
+     */
     $loader->addPrefix('App\\Models', get_template_directory() . '/app/models');
-	$loader->addPrefix('App\\Config', get_template_directory() . '/app/config');
     $loader->addPrefix('App\\Models\\Entity', get_template_directory() . '/app/models/entity');
 
-    $loader->addPrefix('App\\Views', get_template_directory() . '/app/views');
+    /**
+     * Configs
+     */
+	$loader->addPrefix('App\\Config', get_template_directory() . '/app/config');
+    $loader->addPrefix('App\\Config\\ReduxThemeOptions', get_template_directory() . '/app/config/ReduxThemeOptions');
+    $loader->addPrefix('App\\Config\\ReduxMetaBoxes', get_template_directory() . '/app/config/ReduxMetaBoxes');
 
+    /**
+     * Plugins
+     */
     $loader->addPrefix('App\\Plugins', get_template_directory() . '/app/plugins');
-    $loader->addPrefix('App\\Plugins\\Widgets', get_template_directory() . '/app/plugins/cactus-widgets');
-    $loader->addPrefix('App\\Plugins\\Megamenu', get_template_directory() . '/app/plugins/cactus-megamenu');
-    $loader->addPrefix('App\\Plugins\\Walker_Nav_Menu', get_template_directory() . '/app/plugins/cactus-walker-nav-menu');
-    $loader->addPrefix('App\\Plugins\\TGM_Plugin_Activation', get_template_directory() . '/app/plugins/cactus-tgm-plugin-activation');    
-    $loader->addPrefix('App\\Plugins\\Cactus_Option_Tree', get_template_directory() . '/app/plugins/cactus-option-tree');
-    $loader->addPrefix('App\\Plugins\\Cactus_Welcome', get_template_directory() . '/app/plugins/cactus-welcome');
-    $loader->addPrefix('App\\Plugins\\Cactus_LandingPage', get_template_directory() . '/app/plugins/cactus-landing-page');
-    $loader->addPrefix('App\\Plugins\\Cactus_Starter_Content', get_template_directory() . '/app/plugins/cactus-starter-content');
-	$loader->addPrefix('App\\Plugins\\Cactus_Author', get_template_directory() . '/app/plugins/cactus-author');
+    $loader->addPrefix('App\\Plugins\\Widgets', get_template_directory() . '/app/plugins/om-widgets/om-contacts');
+    $loader->addPrefix('App\\Plugins\\Widgets', get_template_directory() . '/app/plugins/om-widgets/om-users');
 
-    $loader->addPrefix('App\\Lib', get_template_directory() . '/app/lib');
-
-    $loader->addPrefix('App\\Metadatas', get_template_directory() . '/app/metadatas');
-
+    /**
+     * Helpers
+     */
     $loader->addPrefix('App\\Helpers', get_template_directory() . '/app/helpers');
 
-    //Register Loader
+    /**
+     * Lib
+     */
+    $loader->addPrefix('App\\Lib', get_template_directory() . '/app/lib');
+    $loader->addPrefix('App\\Lib\\CustomWalkerNavMenu', get_template_directory() . '/app/lib/CustomWalkerNavMenu');
+    /**
+     * Views
+     */
+    $loader->addPrefix('App\\Views', get_template_directory() . '/app/views');
+
+    /**
+     * Register
+     */
     $loader->register();
 	

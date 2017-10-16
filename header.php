@@ -24,20 +24,27 @@
 <div class="o-wrapper">
 	<div id="page" class="hfeed site">
 
-		<header id="masthead" class="site-header" role="banner">
-			<div class="o-header__wrapper">
-				<div class="o-header__inner">
-					<div class="o-main-navigation">
-						<div class="o-main-navigation__inner">
+		<section id="o-top-links" class="o-top-links">
+			<div class="container o-container">
+				<div class="row o-row">
+					<div class="col-xs-12 col-sm-6 o-column">
+              <?php get_template_part('partials/navigation/top-menu/layout', 1)?>
+					</div>
+					<div class="col-xs-12 col-sm-6 o-column">
+						<div class="o-top-socials">
 
 						</div>
 					</div>
-
-					<?php get_template_part('partials/navigation/main/layout', 1);?>
-					<!-- !main-navigation-1-->
-
 				</div>
 			</div>
-		</header><!--!site-header-->
+		</section>
+
+		<header id="masthead" class="site-header layout-1" role="banner">
+			<div class="site-header__inner">
+          <?php get_template_part('partials/navigation/main-menu/layout', 1); ?>
+			</div>
+		</header>
+		<!--!site-header-->
 
 		<section id="content" class="site-content">
+			<div class="site-content__inner">
